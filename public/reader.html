@@ -1,28 +1,33 @@
-<!-- reader.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paola's STEAM School - Reader</title>
-  <link rel="stylesheet" href="/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Book</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <img src="/assets/logo.svg" alt="Logo" class="logo">
+  <header>
+    <img src="assets/logo.png" alt="Paola's STEAM School Logo" class="logo">
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/reader.html">Read</a>
-      <a href="/editor.html">Create</a>
+      <a href="index.html">Home</a>
+      <a href="reader.html">Read</a>
+      <a href="editor.html">Create</a>
     </nav>
   </header>
 
   <main>
-    <h1>Story Reader</h1>
-    <div id="bookContent"></div>
-    <button id="ttsEn">Play English</button>
-    <button id="ttsEs">Play Spanish</button>
-    <button id="ttsJp">Play Japanese</button>
+    <section id="reader">
+      <h2 id="book-title"></h2>
+      <p id="book-text">Loading book...</p>
+      <button id="play-tts" class="btn">Play Audio</button>
+    </section>
   </main>
 
-  <script type="module">
+  <footer>
+    <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
+  </footer>
+
+  <script type="module" src="js/reader.js"></script>
+</body>
+</html>

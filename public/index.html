@@ -1,25 +1,30 @@
-<!-- index.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paola's STEAM School</title>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <img src="/assets/logo.svg" alt="Paola's STEAM School logo" class="logo">
+  <header>
+    <img src="assets/logo.png" alt="Paola's STEAM School Logo" class="logo">
     <nav>
-      <a href="/index.html">Home</a>
-      <a href="/reader.html">Read</a>
-      <a href="/editor.html">Create</a>
+      <a href="index.html">Home</a>
+      <a href="reader.html">Read</a>
+      <a href="editor.html">Create</a>
     </nav>
   </header>
 
-  <main id="app">
-    <section id="featured" class="card-grid" aria-label="Featured Books">
-      <!-- JS inyecta los libros aquí -->
+  <main>
+    <section class="hero">
+      <h1>Paola's STEAM School</h1>
+      <p>Read, create, and enjoy interactive children's books in English, Spanish, and Japanese.</p>
+    </section>
+
+    <section class="books-section">
+      <h2>Featured Books</h2>
+      <div id="books-container" class="book-slider"></div>
     </section>
   </main>
 
@@ -27,6 +32,6 @@
     <p>Copyright © Brigham Young University-Idaho | All rights reserved</p>
   </footer>
 
-  <script type="module" src="/src/js/router.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
