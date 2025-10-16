@@ -8,20 +8,22 @@
     "dev": "nodemon src/app.js"
   },
   "dependencies": {
-    "express": "^4.18.2",
-    "mongoose": "^7.3.1",
-    "dotenv": "^16.3.1",
-    "cors": "^2.8.5",
-    "body-parser": "^1.20.2",
     "axios": "^1.5.0",
-    "pdf-lib": "^1.17.1",
-    "paypal-rest-sdk": "^1.8.1",
     "bcryptjs": "^2.4.3",
-    "jsonwebtoken": "^9.0.0"
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "i18next": "^25.6.0",
+    "i18next-browser-languagedetector": "^8.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.3.1",
+    "paypal-rest-sdk": "^1.8.1",
+    "pdf-lib": "^1.17.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.1",
-    "eslint": "^8.46.0"
+    "eslint": "^8.46.0",
+    "nodemon": "^3.1.1"
   },
   "repository": {
     "type": "git",

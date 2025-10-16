@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paola's STEAM School</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paola's STEAM School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-  <div class="logo">Paola's STEAM School 📚</div>
-  <nav>
-    <select id="languageSelect">
-      <option value="English">English 🇬🇧</option>
-      <option value="Spanish">Español 🇪🇸</option>
-      <option value="Japanese">日本語 🇯🇵</option>
-    </select>
-  </nav>
-</header>
+  <header>
+    <div class="logo" id="logoText">Paola's STEAM School 📚</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="navHome">Home</a></li>
+        <li><a href="books.html" id="navBooks">Books</a></li>
+        <li><a href="editor.html" id="navCreateBook">Create Book</a></li>
+        <li><a href="reader.html" id="navRead">Read</a></li>
+        <li><a href="auth.html" id="navLogin">Login/Register</a></li>
+        <li>
+          <select id="languageSelect">
+            <option value="English">English 🇬🇧</option>
+            <option value="Spanish">Español 🇪🇸</option>
+            <option value="Japanese">日本語 🇯🇵</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section class="hero">
-    <h1 id="homeTitle">Welcome to Paola's STEAM School!</h1>
-    <p id="homeSubtitle">Choose a book to read or create your own!</p>
-  </section>
+  <main>
+    <section class="hero">
+      <h1 id="homeTitle">Welcome to Paola's STEAM School!</h1>
+      <p id="homeSubtitle">Choose a book to read, create your own, or explore interactive lessons!</p>
+    </section>
 
-  <section class="books" id="booksContainer">
-    <!-- Libros dinámicos -->
-  </section>
-</main>
+    <section class="books" id="booksContainer">
+      <!-- Aquí se cargan los libros dinámicamente -->
+    </section>
 
-<script type="module" src="assets/js/main.js"></script>
+
+
+    <section class="api-section">
+  <h2>Cat Facts 🐱</h2>
+  <p id="catFact">Loading...</p>
+</section>
+
+<section class="api-section">
+  <h2>Dog Pictures 🐶</h2>
+  <img id="dogImage" src="" alt="Dog" style="max-width:300px; border-radius:10px;">
+</section>
+
+<section class="api-section">
+  <h2>Random Advice 💡</h2>
+  <p id="advice">Loading...</p>
+</section>
+
+  </main>
+
+  <footer id="footerText">
+    &copy; 2025 Paola's STEAM School | All Rights Reserved
+  </footer>
+
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Library | Paola's STEAM School</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Librería de estilos rápida solo para Books */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #1a3b5d;
+      color: #fff;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    main.library-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    main.library-container h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1a3b5d;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .book-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .book-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .book-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .book-card h3 {
+      margin: 1rem;
+      font-size: 1.2rem;
+      color: #1a3b5d;
+    }
+    .book-card button {
+      background-color: #ff6b6b;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .book-card button:hover {
+      background-color: #e55a5a;
+    }
+    .back-home {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" id="logoText">📚 Paola's STEAM School</div>
+    <nav>
+      <select id="languageSelect">
+        <option value="en">English 🇬🇧</option>
+        <option value="es">Español 🇪🇸</option>
+        <option value="ja">日本語 🇯🇵</option>
+      </select>
+    </nav>
+  </header>
+
+  <main class="library-container">
+    <h1 id="libraryTitle">Explore Our Books</h1>
+
+    <div class="book-grid">
+      <div class="book-card">
+        <img src="assets/img/animals.jpg" alt="Animals Book" />
+        <h3 id="book1Title">Animals Around the World</h3>
+        <button onclick="openReader('animalsbooks.pdf')" id="book1Btn">Read Now</button>
+      </div>
+
+      <div class="book-card">
+        <img src="assets/img/earth.jpg" alt="Earth Book" />
+        <h3 id="book2Title">Our Beautiful Earth</h3>
+        <button onclick="openReader('earthbook.pdf')" id="book2Btn">Read Now</button>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-home" id="backHome">← Back to Home</a>
+  </main>
+
+  <script>
+    function openReader(filename) {
+      window.location.href = `reader.html?book=${filename}`;
+    }
+  </script>
+</body>
+</html>

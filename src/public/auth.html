@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register - Paola's STEAM School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo" id="logoText">Paola's STEAM School 📚</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="navHome">Home</a></li>
+        <li><a href="books.html" id="navBooks">Books</a></li>
+        <li><a href="editor.html" id="navCreateBook">Create Book</a></li>
+        <li><a href="reader.html" id="navRead">Read</a></li>
+        <li><a href="auth.html" class="active" id="navLogin">Login/Register</a></li>
+        <li>
+          <select id="languageSelect">
+            <option value="English">English 🇬🇧</option>
+            <option value="Spanish">Español 🇪🇸</option>
+            <option value="Japanese">日本語 🇯🇵</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-hero">
+      <h1 id="authTitle">Login or Register</h1>
+      <p id="authSubtitle">Access your account or create a new one to manage your books!</p>
+    </section>
+
+    <div class="form-container">
+      <h2 id="loginTitle">Login</h2>
+      <form id="loginForm">
+        <label for="loginEmail" id="labelLoginEmail">Email:</label>
+        <input type="email" id="loginEmail" required>
+
+        <label for="loginPassword" id="labelLoginPassword">Password:</label>
+        <input type="password" id="loginPassword" required>
+
+        <button type="submit" class="btn" id="btnLogin">Login</button>
+      </form>
+    </div>
+
+    <div class="form-container">
+      <h2 id="registerTitle">Register</h2>
+      <form id="registerForm">
+        <label for="registerName" id="labelRegisterName">Name:</label>
+        <input type="text" id="registerName" required>
+
+        <label for="registerEmail" id="labelRegisterEmail">Email:</label>
+        <input type="email" id="registerEmail" required>
+
+        <label for="registerPassword" id="labelRegisterPassword">Password:</label>
+        <input type="password" id="registerPassword" required>
+
+        <button type="submit" class="btn" id="btnRegister">Register</button>
+      </form>
+    </div>
+  </main>
+
+  <footer id="footerText">
+    &copy; 2025 Paola's STEAM School | All Rights Reserved
+  </footer>
+
+  <script type="module" src="assets/js/auth.js"></script>
+</body>
+</html>

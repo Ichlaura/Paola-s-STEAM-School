@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Read Book - Paola's STEAM School</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reader | Paola's STEAM School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body { background: #f7f9fc; }
+    header { background: #1a3b5d; color: white; text-align: center; padding: 1rem; }
+    iframe { width: 100%; height: 90vh; border: none; margin-top: 10px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+    a.back { display: inline-block; margin: 1rem; color: #007bff; text-decoration: none; }
+  </style>
 </head>
 <body>
-<header>
-  <div class="logo">Paola's STEAM School 📚</div>
-  <nav>
-    <select id="languageSelect">
-      <option value="English">English 🇬🇧</option>
-      <option value="Spanish">Español 🇪🇸</option>
-      <option value="Japanese">日本語 🇯🇵</option>
-    </select>
-  </nav>
-</header>
+  <header>
+    <h1 id="readerTitle">📘 Book Reader</h1>
+  </header>
 
-<main>
-  <section class="book-reader" id="bookReader">
-    <h2 id="bookTitle"></h2>
-    <div class="book-pages" id="bookPages"></div>
+  <main>
+    <a href="books.html" class="back" id="backLibrary">← Back to Library</a>
+    <iframe id="pdfViewer"></iframe>
+  </main>
 
-    <div class="tts-buttons">
-      <button id="ttsEnglish">Listen English</button>
-      <button id="ttsSpanish">Listen Spanish</button>
-      <button id="ttsJapanese">Listen Japanese</button>
-    </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const book = params.get('book');
+    const viewer = document.getElementById('pdfViewer');
 
-    <div class="actions">
-      <a id="downloadPdf" href="#" target="_blank">Download PDF</a>
-      <button id="paypalBuy">Buy with PayPal</button>
-    </div>
-  </section>
-</main>
-
-<script type="module" src="assets/js/reader.js"></script>
+    if (book) {
+      viewer.src = `assets/pdfs/${book}`;
+    } else {
+      viewer.srcdoc = "<h2 style='text-align:center;margin-top:50px;' id='noBook'>No book selected 📚</h2>";
+    }
+  </script>
 </body>
 </html>

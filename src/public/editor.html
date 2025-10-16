@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Create Book - Paola's STEAM School</title>
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Book - Paola's STEAM School</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header>
-  <div class="logo">Paola's STEAM School 📚</div>
-  <nav>
-    <a href="index.html">Home</a>
-  </nav>
-</header>
+  <header>
+    <div class="logo" id="logoText">Paola's STEAM School 📚</div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="navHome">Home</a></li>
+        <li><a href="books.html" id="navBooks">Books</a></li>
+        <li><a href="editor.html" class="active" id="navCreateBook">Create Book</a></li>
+        <li><a href="reader.html" id="navRead">Read</a></li>
+        <li><a href="auth.html" id="navLogin">Login/Register</a></li>
+        <li>
+          <select id="languageSelect">
+            <option value="English">English 🇬🇧</option>
+            <option value="Spanish">Español 🇪🇸</option>
+            <option value="Japanese">日本語 🇯🇵</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section class="book-editor">
-    <h2>Create a New Book</h2>
+  <main>
+    <section class="editor-hero">
+      <h1 id="editorTitle">Create Your Own Book!</h1>
+      <p id="editorSubtitle">Write your story, add images, and save it for reading later.</p>
+    </section>
 
-    <form id="bookForm">
-      <label>Book Title (English)</label>
-      <input type="text" name="titleEnglish" required>
+    <section class="editor-form">
+      <form id="createBookForm">
+        <label for="bookTitle" id="labelBookTitle">Book Title:</label>
+        <input type="text" id="bookTitle" required>
 
-      <label>Book Title (Spanish)</label>
-      <input type="text" name="titleSpanish" required>
+        <label for="bookAuthor" id="labelBookAuthor">Author:</label>
+        <input type="text" id="bookAuthor" required>
 
-      <label>Book Title (Japanese)</label>
-      <input type="text" name="titleJapanese" required>
+        <label for="bookContent" id="labelBookContent">Content:</label>
+        <textarea id="bookContent" rows="10" required></textarea>
 
-      <label>Book Price (USD)</label>
-      <input type="number" name="price" required>
+        <label for="bookImage" id="labelBookImage">Cover Image URL:</label>
+        <input type="url" id="bookImage">
 
-      <div id="pagesContainer">
-        <h3>Pages</h3>
-        <div class="page">
-          <textarea placeholder="English Text" name="pageEnglish[]"></textarea>
-          <textarea placeholder="Spanish Text" name="pageSpanish[]"></textarea>
-          <textarea placeholder="Japanese Text" name="pageJapanese[]"></textarea>
-          <input type="file" name="images[]" accept="image/*">
-        </div>
-      </div>
+        <button type="submit" class="btn" id="btnCreateBook">Create Book</button>
+      </form>
+    </section>
+  </main>
 
-      <button type="button" id="addPage">Add Page</button>
-      <button type="submit">Save Book</button>
-    </form>
+  <footer id="footerText">
+    &copy; 2025 Paola's STEAM School | All Rights Reserved
+  </footer>
 
-    <h3>Preview</h3>
-    <div id="bookPreview"></div>
-  </section>
-</main>
-
-<script type="module" src="assets/js/editor.js"></script>
+  <script type="module" src="assets/js/editor.js"></script>
 </body>
 </html>
