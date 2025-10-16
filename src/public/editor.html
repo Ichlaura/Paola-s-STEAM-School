@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Book - Paola's STEAM School</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Paola's STEAM School 📚</div>
+  <nav>
+    <a href="index.html">Home</a>
+  </nav>
+</header>
+
+<main>
+  <section class="book-editor">
+    <h2>Create a New Book</h2>
+
+    <form id="bookForm">
+      <label>Book Title (English)</label>
+      <input type="text" name="titleEnglish" required>
+
+      <label>Book Title (Spanish)</label>
+      <input type="text" name="titleSpanish" required>
+
+      <label>Book Title (Japanese)</label>
+      <input type="text" name="titleJapanese" required>
+
+      <label>Book Price (USD)</label>
+      <input type="number" name="price" required>
+
+      <div id="pagesContainer">
+        <h3>Pages</h3>
+        <div class="page">
+          <textarea placeholder="English Text" name="pageEnglish[]"></textarea>
+          <textarea placeholder="Spanish Text" name="pageSpanish[]"></textarea>
+          <textarea placeholder="Japanese Text" name="pageJapanese[]"></textarea>
+          <input type="file" name="images[]" accept="image/*">
+        </div>
+      </div>
+
+      <button type="button" id="addPage">Add Page</button>
+      <button type="submit">Save Book</button>
+    </form>
+
+    <h3>Preview</h3>
+    <div id="bookPreview"></div>
+  </section>
+</main>
+
+<script type="module" src="assets/js/editor.js"></script>
+</body>
+</html>

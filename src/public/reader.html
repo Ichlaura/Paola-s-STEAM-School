@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Read Book - Paola's STEAM School</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Paola's STEAM School 📚</div>
+  <nav>
+    <select id="languageSelect">
+      <option value="English">English 🇬🇧</option>
+      <option value="Spanish">Español 🇪🇸</option>
+      <option value="Japanese">日本語 🇯🇵</option>
+    </select>
+  </nav>
+</header>
+
+<main>
+  <section class="book-reader" id="bookReader">
+    <h2 id="bookTitle"></h2>
+    <div class="book-pages" id="bookPages"></div>
+
+    <div class="tts-buttons">
+      <button id="ttsEnglish">Listen English</button>
+      <button id="ttsSpanish">Listen Spanish</button>
+      <button id="ttsJapanese">Listen Japanese</button>
+    </div>
+
+    <div class="actions">
+      <a id="downloadPdf" href="#" target="_blank">Download PDF</a>
+      <button id="paypalBuy">Buy with PayPal</button>
+    </div>
+  </section>
+</main>
+
+<script type="module" src="assets/js/reader.js"></script>
+</body>
+</html>
