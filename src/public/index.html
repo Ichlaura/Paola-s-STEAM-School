@@ -5,6 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paola's STEAM School</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    /* Decoración rápida para los cards de API */
+    .api-section {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .api-card {
+      background: #f0f4f8;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      width: 220px;
+    }
+    .api-card h2 {
+      margin-bottom: 0.5rem;
+    }
+    .api-card button {
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background-color: #1a3b5d;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .api-card button:hover {
+      background-color: #0056b3;
+    }
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .bookCard {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      padding: 0.5rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .bookCard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+    .bookCard img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .bookCard h3 {
+      margin: 0.5rem 0;
+    }
+    .bookCard a {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.4rem 0.8rem;
+      background-color: #1a3b5d;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+    .bookCard a:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -37,22 +109,25 @@
       <!-- Aquí se cargan los libros dinámicamente -->
     </section>
 
-
-
     <section class="api-section">
-  <h2>Cat Facts 🐱</h2>
-  <p id="catFact">Loading...</p>
-</section>
+      <div class="api-card">
+        <h2>Cat Facts 🐱</h2>
+        <p id="catFact">Loading...</p>
+        <button id="newCatFactBtn">New Fact</button>
+      </div>
 
-<section class="api-section">
-  <h2>Dog Pictures 🐶</h2>
-  <img id="dogImage" src="" alt="Dog" style="max-width:300px; border-radius:10px;">
-</section>
+      <div class="api-card">
+        <h2>Dog Pictures 🐶</h2>
+        <img id="dogImg" src="" alt="Dog" style="width:100%;border-radius:8px;"/>
+        <button id="newDogBtn">New Dog</button>
+      </div>
 
-<section class="api-section">
-  <h2>Random Advice 💡</h2>
-  <p id="advice">Loading...</p>
-</section>
+      <div class="api-card">
+        <h2>Random Advice 💡</h2>
+        <p id="adviceText">Loading...</p>
+        <button id="newAdviceBtn">New Advice</button>
+      </div>
+    </section>
 
   </main>
 
